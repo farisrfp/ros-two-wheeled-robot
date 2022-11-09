@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot>
+
+  <!--Move wheels custom behaviour-->
+  <gazebo>
+    <plugin name="move_wheels" filename="libmoveWheels_plugin.so">
+    </plugin>
+  </gazebo>
+
+  <!--Get encoders ticks behaviour-->
+  <gazebo>
+    <plugin name="encoders_ticks" filename="libencodersTicks_plugin.so">
+    </plugin>
+  </gazebo>
+
+  <!--Get Odometry-->
+  <gazebo>
+    <plugin name="get_odom" filename="libodom_plugin.so">
+      <frontLeftJoint>front_left_joint</frontLeftJoint>
+      <frontRightJoint>front_right_joint</frontRightJoint>
+      <rearLeftJoint>rear_left_joint</rearLeftJoint>
+      <rearRightJoint>rear_right_joint</rearRightJoint>
+      <wheelSeparation>0.46</wheelSeparation>
+      <wheelDiameter>0.196</wheelDiameter>
+      <updateRate>40</updateRate>
+    </plugin>
+  </gazebo>
+
+  <!-- Defining the colors used in this robot -->
+  <material name="Black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="Red">
+    <color rgba="0.8 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="White">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+
+  <material name="Blue">
+    <color rgba="0.0 0.0 0.8 1.0"/>
+  </material>
+
+  <material name="Grey">
+    <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+
+
+
+</robot>
