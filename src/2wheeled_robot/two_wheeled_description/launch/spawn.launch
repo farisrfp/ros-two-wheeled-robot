@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
     <rosparam command="load" file="$(find simple_robot_gazebo)/config/motors_parameters.yaml" />
-    <param name="robot_description" command="$(find xacro)/xacro.py '$(find two_wheeled_description)/urdf/2wheeled.xacro'" />
+    <param name="robot_description" command="$(find xacro)/xacro '$(find two_wheeled_description)/urdf/2wheeled.xacro'" />
 
     <arg name="x" default="0"/>
     <arg name="y" default="0"/>

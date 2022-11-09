@@ -79,7 +79,7 @@ void OdomPlugin::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
   else
     update_period = 0.0;
 
-  last_update_time = parent->GetWorld()->GetSimTime();
+  last_update_time = parent->GetWorld()->SimTime();
 
   // listen to the update event (broadcast every simulation iteration)
   this->updateConnection = event::Events::ConnectWorldUpdateBegin(boost::bind(&OdomPlugin::UpdateChild, this));
@@ -98,7 +98,7 @@ void OdomPlugin::UpdateChild()
 {
   UpdateOdometryEncoder();
 
-  common::Time current_time = parent->GetWorld()->GetSimTime();
+  common::Time current_time = parent->GetWorld()->SimTime();
   double seconds_since_last_update = (current_time - last_update_time).Double();
 
   if (seconds_since_last_update > update_period) {
@@ -181,7 +181,7 @@ void OdomPlugin::UpdateOdometryEncoder()
     double vl = joints[LEFT]->GetVelocity ( 0 );
     double vr = joints[RIGHT]->GetVelocity ( 0 );
 
-    common::Time current_time = parent->GetWorld()->GetSimTime();
+    common::Time current_time = parent->GetWorld()->SimTime();
 
     double seconds_since_last_update = ( current_time - last_odom_update ).Double();
     last_odom_update = current_time;

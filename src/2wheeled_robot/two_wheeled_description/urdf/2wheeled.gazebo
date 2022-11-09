@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
-<robot>
+<robot xmlns:xacro="https://www.ros.org/wiki/xacro">
 
   <!-- properties (constants) -->
-  <property name="ns" value="" />
+  <xacro:property name="ns" value="" />
 
   <!-- ros_control plugin -->
   <gazebo>

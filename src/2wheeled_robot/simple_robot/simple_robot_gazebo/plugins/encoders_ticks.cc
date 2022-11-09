@@ -82,7 +82,7 @@ void EncodersTicksPlugin::OnUpdate(const common::UpdateInfo & /*_info*/)
 
   if (num_of_wheels == 2) {
     // get the left joint angle
-    math::Angle left_angle = (this->jointList[1])->GetAngle(0);
+    ignition::math::Angle left_angle = (this->jointList[1])->Position(0);
 
     double encoder_left0, encoder_right0;
 
@@ -99,7 +99,7 @@ void EncodersTicksPlugin::OnUpdate(const common::UpdateInfo & /*_info*/)
     //ROS_INFO("[encoders]: Left %f at %d", encoder_left, milliTime);
 
     // get the right joint angle
-    math::Angle right_angle = (this->jointList[0])->GetAngle(0);
+    ignition::math::Angle right_angle = (this->jointList[0])->Position(0);
 
     double angle_right = right_angle.Radian();
     double encoder_right = angle_right*(180/M_PI);
@@ -122,7 +122,7 @@ void EncodersTicksPlugin::OnUpdate(const common::UpdateInfo & /*_info*/)
 
     // Front wheels
     // get the front left joint angle
-    math::Angle front_left_angle = (this->jointList[0])->GetAngle(0);
+    ignition::math::Angle front_left_angle = (this->jointList[0])->Position(0);
 
     double front_angle_left = front_left_angle.Radian();
     double encoder_front_left = front_angle_left*(180/M_PI);
@@ -136,7 +136,7 @@ void EncodersTicksPlugin::OnUpdate(const common::UpdateInfo & /*_info*/)
     //ROS_INFO("[encoders]: Left %f at %d", encoder_left, milliTime);
 
     // get the right joint angle
-    math::Angle front_right_angle = (this->jointList[1])->GetAngle(0);
+    ignition::math::Angle front_right_angle = (this->jointList[1])->Position(0);
 
     double front_angle_right = front_right_angle.Radian();
     double encoder_front_right = front_angle_right*(180/M_PI);
@@ -152,7 +152,7 @@ void EncodersTicksPlugin::OnUpdate(const common::UpdateInfo & /*_info*/)
 
     // Rear wheels
     // get the front left joint angle
-    math::Angle rear_left_angle = (this->jointList[2])->GetAngle(0);
+    ignition::math::Angle rear_left_angle = (this->jointList[2])->Position(0);
 
     double rear_angle_left = rear_left_angle.Radian();
     double encoder_rear_left = rear_angle_left*(180/M_PI);
@@ -166,7 +166,7 @@ void EncodersTicksPlugin::OnUpdate(const common::UpdateInfo & /*_info*/)
     //ROS_INFO("[encoders]: Left %f at %d", encoder_left, milliTime);
 
     // get the right joint angle
-    math::Angle rear_right_angle = (this->jointList[3])->GetAngle(0);
+    ignition::math::Angle rear_right_angle = (this->jointList[3])->Position(0);
 
     double rear_angle_right = rear_right_angle.Radian();
     double encoder_rear_right = rear_angle_right*(180/M_PI);
