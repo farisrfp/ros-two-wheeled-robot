@@ -1,0 +1,8 @@
+prefix=/home/farisrafi/catkin_ws/install
+
+Name: simple_robot_description_2wheels
+Description: Description of simple_robot_description_2wheels
+Version: 0.2.11
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

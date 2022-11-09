@@ -1,0 +1,8 @@
+prefix=/home/farisrafi/catkin_ws/devel
+
+Name: two_wheeled_description
+Description: Description of two_wheeled_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
