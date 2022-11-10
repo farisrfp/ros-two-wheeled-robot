@@ -1,8 +1,0 @@
-prefix=/home/farisrafi/catkin_ws/install
-
-Name: two_wheeled_control
-Description: Description of two_wheeled_control
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

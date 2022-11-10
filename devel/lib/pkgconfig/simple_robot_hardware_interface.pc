@@ -1,8 +1,0 @@
-prefix=/home/farisrafi/catkin_ws/devel
-
-Name: simple_robot_hardware_interface
-Description: Description of simple_robot_hardware_interface
-Version: 0.0.2
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/farisrafi/catkin_ws/devel
-
-Name: simple_robot_tests
-Description: Description of simple_robot_tests
-Version: 0.0.3
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

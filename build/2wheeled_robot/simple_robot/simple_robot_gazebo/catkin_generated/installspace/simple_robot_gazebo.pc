@@ -1,8 +1,0 @@
-prefix=/home/farisrafi/catkin_ws/install
-
-Name: simple_robot_gazebo
-Description: Description of simple_robot_gazebo
-Version: 0.2.12
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: gazebo_msgs gazebo_plugins gazebo_ros simple_robot_description message_runtime roscpp gazebo_ros
